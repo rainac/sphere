@@ -1,0 +1,3 @@
+
+cd sph/vtk
+make

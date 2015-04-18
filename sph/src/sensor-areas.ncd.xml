@@ -1,0 +1,10 @@
+<ncdef name="SensorAreas" c-prefix="SENSOR_AREA_">
+    <c name="DUMMY"/>
+
+    <c name="ORTHOGONAL_RECTANGLE"/>
+    <c name="HYPERPLANE"/>
+    <c name="HYPERPLANE_ORIENTED"/>
+    <c name="TWO_HYPERPLANES"/>
+    <c name="SPHERE"/>
+
+</ncdef>

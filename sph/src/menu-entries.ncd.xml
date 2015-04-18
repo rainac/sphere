@@ -1,0 +1,99 @@
+<ncdef name="MenuEntries">
+    <c name="MENU_NONE"/>
+
+    <c name="MENU_QUIT"/>
+    <c name="MENU_EXIT_SUCCESS"/>
+    <c name="MENU_EXIT_FAILURE"/>
+    <c name="MENU_ABORT"/>
+
+    <c name="MENU_RESET_WINDOW"/>
+    <c name="MENU_RESET_CAMERA"/>
+    <c name="MENU_FULLSCREEN"/>
+
+    <c name="MENU_SHOW_COORD_SYSTEM"/>
+    <c name="MENU_SHOW_RASTER"/>
+    <c name="MENU_SHOW_SIMULATION_AREA"/>
+    <c name="MENU_SHOW_SENSORS"/>
+    <c name="MENU_SHOW_BOUNDARY_PARTICLES"/>
+    <c name="MENU_SHOW_OUT_PARTICLES"/>
+    <c name="MENU_SHOW_VECTORS"/>
+
+    <c name="MENU_PARTICLE_AS_SOLID_SPHERE"/>
+    <c name="MENU_PARTICLE_AS_WIRE_SPHERE"/>
+    <c name="MENU_PARTICLE_AS_POINT"/>
+
+<!--
+    <c name="MENU_PARTICLE_VEC_UNIT"/>
+    <c name="MENU_PARTICLE_VEC_SHORTER"/>
+    <c name="MENU_PARTICLE_VEC_LONGER"/>
+
+    <c name="MENU_PARTICLE_SIZE_UNIT"/>
+    <c name="MENU_PARTICLE_SIZE_LARGER"/>
+    <c name="MENU_PARTICLE_SIZE_SMALLER"/>
+-->
+
+    <c name="MENU_PARTICLE_SIZE_VOL"/>
+    <c name="MENU_PARTICLE_SIZE_H"/>
+
+
+    <c name="MENU_PARTICLE_VEC_VELOCITY"/>
+    <c name="MENU_PARTICLE_VEC_DENSITY"/>
+    <c name="MENU_PARTICLE_VEC_PRESSURE"/>
+    <c name="MENU_PARTICLE_VEC_HEAT"/>
+
+    <c name="MENU_PARTICLE_VEC_COORD_D0"/>
+    <c name="MENU_PARTICLE_VEC_COORD_D1"/>
+    <c name="MENU_PARTICLE_VEC_COORD_D2"/>
+    <c name="MENU_PARTICLE_VEC_VELOCITY_D0"/>
+    <c name="MENU_PARTICLE_VEC_VELOCITY_D1"/>
+    <c name="MENU_PARTICLE_VEC_VELOCITY_D2"/>
+    <c name="MENU_PARTICLE_VEC_DENSITY_D0"/>
+    <c name="MENU_PARTICLE_VEC_DENSITY_D1"/>
+    <c name="MENU_PARTICLE_VEC_DENSITY_D2"/>
+    <c name="MENU_PARTICLE_VEC_PRESSURE_D0"/>
+    <c name="MENU_PARTICLE_VEC_PRESSURE_D1"/>
+    <c name="MENU_PARTICLE_VEC_PRESSURE_D2"/>
+    <c name="MENU_PARTICLE_VEC_HEAT_D0"/>
+    <c name="MENU_PARTICLE_VEC_HEAT_D1"/>
+    <c name="MENU_PARTICLE_VEC_HEAT_D2"/>
+
+    <c name="MENU_PARTICLE_COLOR_VELOCITY"/>
+    <c name="MENU_PARTICLE_COLOR_DENSITY"/>
+    <c name="MENU_PARTICLE_COLOR_PRESSURE"/>
+    <c name="MENU_PARTICLE_COLOR_HEAT"/>
+    <c name="MENU_PARTICLE_COLOR_CLASS"/>
+    <c name="MENU_PARTICLE_COLOR_COLOR"/>
+    <c name="MENU_PARTICLE_COLOR_NUM_NEIGHBOURS"/>
+    <c name="MENU_PARTICLE_COLOR_ID"/>
+    <c name="MENU_PARTICLE_COLOR_FLAGS"/>
+    <c name="MENU_PARTICLE_COLOR_INDEX"/>
+    <c name="MENU_PARTICLE_COLOR_HASH"/>
+
+    <c name="MENU_PARTICLE_COLOR_COORD_D0"/>
+    <c name="MENU_PARTICLE_COLOR_COORD_D1"/>
+    <c name="MENU_PARTICLE_COLOR_COORD_D2"/>
+    <c name="MENU_PARTICLE_COLOR_VELOCITY_D0"/>
+    <c name="MENU_PARTICLE_COLOR_VELOCITY_D1"/>
+    <c name="MENU_PARTICLE_COLOR_VELOCITY_D2"/>
+    <c name="MENU_PARTICLE_COLOR_DENSITY_D0"/>
+    <c name="MENU_PARTICLE_COLOR_DENSITY_D1"/>
+    <c name="MENU_PARTICLE_COLOR_DENSITY_D2"/>
+    <c name="MENU_PARTICLE_COLOR_PRESSURE_D0"/>
+    <c name="MENU_PARTICLE_COLOR_PRESSURE_D1"/>
+    <c name="MENU_PARTICLE_COLOR_PRESSURE_D2"/>
+    <c name="MENU_PARTICLE_COLOR_HEAT_D0"/>
+    <c name="MENU_PARTICLE_COLOR_HEAT_D1"/>
+    <c name="MENU_PARTICLE_COLOR_HEAT_D2"/>
+
+    <c name="MENU_COLOR_MAP_MAP"/>
+    <c name="MENU_COLOR_MAP_GRADIENT_RB"/>
+    <c name="MENU_COLOR_MAP_GRADIENT_RG"/>
+    <c name="MENU_COLOR_MAP_GRADIENT_GB"/>
+
+    <c name="MENU_COLOR_RANGE_ALL"/>
+    <c name="MENU_COLOR_RANGE_MOVING"/>
+
+    <c name="MENU_HELP"/>
+    <c name="MENU_ABOUT"/>
+
+</ncdef>

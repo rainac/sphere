@@ -1,0 +1,6 @@
+<ncdef name="ScheduleTypes" c-prefix="SPH_OMP_SCHEDULE_">
+    <c name="STATIC"><expr>omp_sched_static</expr></c>
+    <c name="DYNAMIC"><expr>omp_sched_dynamic</expr></c>
+    <!--    <c name="GUIDED" val="omp_sched_guide"/> -->
+    <c name="AUTO"><expr>omp_sched_auto</expr></c>
+</ncdef>

@@ -1,0 +1,5 @@
+<ncdef name="SortedIndexTypes" c-prefix="SORTED_INDEX_">
+    <c name="CSORT"/>
+    <c name="STDSORT_SER_INDEX"/>
+    <c name="STDSORT_PAR_INDEX"/>
+</ncdef>

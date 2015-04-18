@@ -1,0 +1,9 @@
+<ncdef name="ParticleClasses" c-prefix="PARTICLE_TYPE_">
+    <c name="MOVING_DEFAULT" val="0"/>
+    <c name="BOUNDARY_DEFAULT" val="1"/>
+    <c name="MONAGHAN" val="0x11"/>
+    <c name="MONAGHAN_XSPH" val="0x12"/>
+    <c name="FERRARI" val="0x19"/>
+    <c name="LENNARD_JONES" val="0x41"/>
+    <c name="POINT_MIRRORED" val="0x42"/>
+</ncdef>

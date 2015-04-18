@@ -1,0 +1,13 @@
+<!-- FIXME: rename to SensorProperty or SensorParticleProperty -->
+<ncdef name="SensorTypes" c-prefix="SENSOR_TYPE_">
+    <c name="DUMMY"/>
+
+    <c name="COUNT">The contribution is 1 for each partice</c>
+    <c name="DENSITY">The contribution is the particle's density</c>
+    <c name="ENERGY_HEIGHT">The particle's energy height is computed</c>
+    <c name="IMPULSE">The norm of the particle velocity times the particle's mass</c>
+    <c name="KINETIC_ENERGY">The square of the particle velocity times 0.5, times the particle's mass</c>
+    <c name="MASS">The particle's mass</c>
+    <c name="PRESSURE">The particle's pressure</c>
+    <c name="VELOCITY">The norm of the particle's velocity</c>
+</ncdef>

@@ -1,0 +1,10 @@
+ <ncdef name="FillPatterns" c-prefix="FILL_PATTERN_">
+    <c name="CUBOID"/>
+    <c name="STAGGERED_CUBOID"/>
+<!--    <c name="FACE_CENTERED_CUBOID"/>
+    <c name="BODY_CENTERED_CUBOID"/> -->
+    <c name="HEXAGONAL"/>
+    <c name="HCP"/>
+    <c name="SPHERE"/>
+    <c name="SPHERE_ALT"/>
+</ncdef>

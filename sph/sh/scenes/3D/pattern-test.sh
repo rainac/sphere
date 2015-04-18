@@ -1,0 +1,130 @@
+#! /bin/zsh
+# Example settings file for SPH scene compiler
+#
+
+SPH_ROOT=${SPH_ROOT:-.}
+
+# GLOBAL PARAMETERS
+#
+#export SPH_PARAM_SAVE_ASCII="1"    # 1: ASCII 0: BINARY
+export SPH_PARAM_SCENE_OUTFILE="${SPH_PARAM_SCENE_OUTFILE:-pattern-test}"
+
+export SPH_PARAM_QUADER_P2="1 1 1"
+
+# SETTINGS FOR ALL "AREAS"
+#
+export SPH_PARAM_DX=${SPH_PARAM_DX:-1e-2}
+
+# SETTINGS FOR "AREAS" TO BE FILLED WITH PARTICLES
+#
+export SPH_PARAM_INIT_NUM="21"
+
+export SPH_PARAM_INIT_A0_P1="0   0   0"
+export SPH_PARAM_INIT_A0_P2="0.1 0.1 0.1"
+export SPH_PARAM_INIT_A0_PATTERN="cuboid"
+
+export SPH_PARAM_INIT_A1_P1="0.1   0   0"
+export SPH_PARAM_INIT_A1_P2="0.2 0.1   0.1"
+export SPH_PARAM_INIT_A1_PATTERN="cuboid"
+
+
+export SPH_PARAM_INIT_A2_P1="0   0.2 0"
+export SPH_PARAM_INIT_A2_P2="0.1 0.3 0.1"
+export SPH_PARAM_INIT_A2_PATTERN="staggered_cuboid"
+
+export SPH_PARAM_INIT_A3_P1="0.1 0.2 0"
+export SPH_PARAM_INIT_A3_P2="0.2 0.3 0.1"
+export SPH_PARAM_INIT_A3_PATTERN="staggered_cuboid"
+export SPH_PARAM_INIT_A3_ODD="1"
+
+
+export SPH_PARAM_INIT_A4_P1="0   0.4 0"
+export SPH_PARAM_INIT_A4_P2="0.1 0.5 0.1"
+export SPH_PARAM_INIT_A4_PATTERN="staggered_cuboid"
+export SPH_PARAM_INIT_A4_ODD="1"
+
+export SPH_PARAM_INIT_A5_P1="0.1 0.4 0"
+export SPH_PARAM_INIT_A5_P2="0.2 0.5 0.1"
+export SPH_PARAM_INIT_A5_PATTERN="staggered_cuboid"
+
+
+export SPH_PARAM_INIT_A6_P1="0   0.6 0"
+export SPH_PARAM_INIT_A6_P2="0.1 0.7 0.1"
+export SPH_PARAM_INIT_A6_PATTERN="hexagonal"
+
+export SPH_PARAM_INIT_A7_P1="0.1 0.6 0"
+export SPH_PARAM_INIT_A7_P2="0.2 0.7 0.1"
+export SPH_PARAM_INIT_A7_PATTERN="hexagonal"
+export SPH_PARAM_INIT_A7_ODD="1"
+
+
+export SPH_PARAM_INIT_A8_P1="0   0.8 0"
+export SPH_PARAM_INIT_A8_P2="0.1 0.9 0.1"
+export SPH_PARAM_INIT_A8_PATTERN="hexagonal"
+export SPH_PARAM_INIT_A8_ODD="1"
+
+export SPH_PARAM_INIT_A9_P1="0.1 0.8 0"
+export SPH_PARAM_INIT_A9_P2="0.2 0.9 0.1"
+export SPH_PARAM_INIT_A9_PATTERN="hexagonal"
+
+
+export SPH_PARAM_INIT_A10_P1="0.0 1.0 0"
+export SPH_PARAM_INIT_A10_P2="0.1 1.1 0.1"
+export SPH_PARAM_INIT_A10_PATTERN="hcp"
+
+export SPH_PARAM_INIT_A11_P1="0.1 1.0 0"
+export SPH_PARAM_INIT_A11_P2="0.2 1.1 0.1"
+export SPH_PARAM_INIT_A11_PATTERN="hcp"
+export SPH_PARAM_INIT_A11_ODD="1"
+
+
+export SPH_PARAM_INIT_A12_P1="0. 1.2 0"
+export SPH_PARAM_INIT_A12_P2="0.1 1.3 0.1"
+export SPH_PARAM_INIT_A12_PATTERN="hcp"
+export SPH_PARAM_INIT_A12_ODD="1"
+
+export SPH_PARAM_INIT_A13_P1="0.1 1.2 0"
+export SPH_PARAM_INIT_A13_P2="0.2 1.3 0.1"
+export SPH_PARAM_INIT_A13_PATTERN="hcp"
+
+
+export SPH_PARAM_INIT_A14_P1="0.3 0   0"
+export SPH_PARAM_INIT_A14_P2="0.4 0.1 0.1"
+export SPH_PARAM_INIT_A14_PATTERN="cuboid"
+export SPH_PARAM_INIT_A14_FILL="1"
+
+export SPH_PARAM_INIT_A15_P1="0.3 0.2 0"
+export SPH_PARAM_INIT_A15_P2="0.4 0.3 0.1"
+export SPH_PARAM_INIT_A15_PATTERN="staggered_cuboid"
+export SPH_PARAM_INIT_A15_FILL="1"
+
+export SPH_PARAM_INIT_A16_P1="0.3 0.4 0"
+export SPH_PARAM_INIT_A16_P2="0.4 0.5 0.1"
+export SPH_PARAM_INIT_A16_PATTERN="staggered_cuboid"
+export SPH_PARAM_INIT_A16_FILL="1"
+export SPH_PARAM_INIT_A16_ODD="1"
+
+export SPH_PARAM_INIT_A17_P1="0.3 0.6 0"
+export SPH_PARAM_INIT_A17_P2="0.4 0.7 0.1"
+export SPH_PARAM_INIT_A17_PATTERN="hexagonal"
+export SPH_PARAM_INIT_A17_FILL="1"
+
+export SPH_PARAM_INIT_A18_P1="0.3 0.8 0"
+export SPH_PARAM_INIT_A18_P2="0.4 0.9 0.1"
+export SPH_PARAM_INIT_A18_PATTERN="hexagonal"
+export SPH_PARAM_INIT_A18_FILL="1"
+export SPH_PARAM_INIT_A18_ODD="1"
+
+export SPH_PARAM_INIT_A19_P1="0.3 1. 0"
+export SPH_PARAM_INIT_A19_P2="0.4 1.1 0.1"
+export SPH_PARAM_INIT_A19_PATTERN="hcp"
+export SPH_PARAM_INIT_A19_FILL="1"
+
+export SPH_PARAM_INIT_A20_P1="0.3 1.2 0"
+export SPH_PARAM_INIT_A20_P2="0.4 1.3 0.1"
+export SPH_PARAM_INIT_A20_PATTERN="hcp"
+export SPH_PARAM_INIT_A20_FILL="1"
+export SPH_PARAM_INIT_A20_ODD="1"
+
+#valgrind sph-scene
+sph-scene

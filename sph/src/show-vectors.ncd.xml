@@ -1,0 +1,14 @@
+<ncdef name="ShowVectors">
+    <c name="SHOW_VEC_NONE"/>
+
+    <c name="SHOW_VEC_VELOCITY"/>
+
+    <c name="SHOW_VEC_COORD_D0"/>
+    <c name="SHOW_VEC_COORD_D1"/>
+    <c name="SHOW_VEC_COORD_D2"/>
+
+    <c name="SHOW_VEC_VELOCITY_D0"/>
+    <c name="SHOW_VEC_VELOCITY_D1"/>
+    <c name="SHOW_VEC_VELOCITY_D2"/>
+
+</ncdef>

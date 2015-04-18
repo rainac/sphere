@@ -1,0 +1,21 @@
+<ncdef name="SensorFlags" c-prefix="SENSOR_FLAGS_">
+   <c name="SENSOR_TRIGGERED"   val="0x1u"/>
+   <c name="SENSOR_TRIGGERED_2" val="0x2u"/>
+   <c name="SENSOR_TRIGGERED_3" val="0x4u"/>
+   <c name="SENSOR_TRIGGERED_4" val="0x8u"/>
+
+   <c name="SENSOR_TRIGGERED_5" val="0x10u"/>
+   <c name="SENSOR_TRIGGERED_6" val="0x20u"/>
+   <c name="SENSOR_TRIGGERED_7" val="0x40u"/>
+   <c name="SENSOR_TRIGGERED_8" val="0x80u"/>
+
+   <c name="SENSOR_TRIGGERED_9"  val="0x100u"/>
+   <c name="SENSOR_TRIGGERED_10" val="0x200u"/>
+   <c name="SENSOR_TRIGGERED_11" val="0x400u"/>
+   <c name="SENSOR_TRIGGERED_12" val="0x800u"/>
+
+   <c name="SENSOR_TRIGGERED_13" val="0x1000u"/>
+   <c name="SENSOR_TRIGGERED_14" val="0x2000u"/>
+   <c name="SENSOR_TRIGGERED_15" val="0x4000u"/>
+   <c name="SENSOR_TRIGGERED_16" val="0x8000u"/>
+</ncdef>

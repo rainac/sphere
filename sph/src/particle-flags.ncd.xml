@@ -1,0 +1,5 @@
+<ncdef name="ParticleFlags" c-prefix="PARTICLE_FLAG_">
+   <c name="OUT" val="0x1u"/>
+   <c name="RENDER" val="0x2u"/>
+   <c name="BOUNDARY" val="0x8u"/>
+</ncdef>

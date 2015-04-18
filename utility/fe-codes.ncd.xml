@@ -1,0 +1,7 @@
+<ncdef name="FExceptions" c-prefix="FE_">
+  <c name="INEXACT"/>
+  <c name="UNDERFLOW"/>
+  <c name="OVERFLOW"/>
+  <c name="DIVBYZERO"/>
+  <c name="INVALID"/>
+</ncdef>
