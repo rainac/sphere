@@ -7,6 +7,7 @@ sph-1d
 sph-2d
 sph-3d
 sph-scene
+vtkdump
 *.tex
 *.in
 /autom4te.cache
@@ -20,11 +21,12 @@ config.h
 /Makefile
 /sph/Makefile
 /sph/sh/Makefile
+/sph/octave/Makefile
 /sph/src/Makefile
 /sph/tests/Makefile
 /utility/Makefile
 .deps
 cppunittestmain
-/sph/vtk/test-cases2
+/sph/vtk/test-cases
 /stamp-h1
 /version.txt
