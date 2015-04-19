@@ -176,6 +176,7 @@ AC_CONFIG_FILES([Makefile
                  utility/Makefile
                  sph/Makefile
                  sph/sh/Makefile
+                 sph/octave/Makefile
                  sph/src/Makefile
                  sph/tests/Makefile
 ])

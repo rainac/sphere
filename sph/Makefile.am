@@ -4,7 +4,7 @@
 # See the file sph/src/sph.hh for copying conditions.  
 #
 
-SUBDIRS = sh src tests
+SUBDIRS = sh src tests octave
 
 project_files = 
 
