@@ -60,7 +60,10 @@ function res = h52vtk(name, outdir, binary, matlab, boundingBox, saveFnkt)
 
   if ~exist(outdir, 'dir')
     fprintf(1, 'creating output directory "%s"\n', outdir);
-    mkdir(outdir);
+    r = mkdir(outdir);
+    if ~exist(outdir, 'dir')
+      error('failed to create output directory "%s"\n', outdir);
+    end
   end
 
   outnameTemplate = [outdir '/res_%05d'];
