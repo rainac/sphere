@@ -20,6 +20,7 @@ _________________
 .. 1.4 Compile SPH
 ..... 1.4.1 Build test input files (scenes)
 ..... 1.4.2 Running Sphere
+..... 1.4.3 Converting output to VTK
 
 
 
@@ -204,3 +205,32 @@ _________________
   ,----
   | sphere -d1e-4 -r10 vtk/test-cases2/2D/monaghan-ellipsis/mittel/test.vtk
   `----
+  This creates a file `sph-result-2d.h5' which contains the particle
+  data at each of the save time steps. Also, information about the
+  simulation is printed to the console in XML format and saved also in
+  the file `sph-result-2d.sphrun.xml'.
+
+  For more information on sphere options, run
+  ,----
+  | sphere -h
+  `----
+
+  `sphere' is just a shell script that launches the actual SPH
+  binary. Some settings are not yet available as options in `sphere' but
+  can only be triggered using environment variables.
+
+
+1.4.3 Converting output to VTK
+------------------------------
+
+  There is the script `h52vtk.sh', which converts a single HDF5 file
+  into a series of VTK files, which can be viewed with Paraview.
+
+  ,----
+  | h52vtk.sh sph-result-2d.h5
+  `----
+
+  This creates a directory `sph-result-2d' with files `res_00000.vtk',
+  `res_00001.vtk', ... which contain the dynamic particle data and a
+  file `boundary.vtk' which contains the static (boundary) particle
+  data.

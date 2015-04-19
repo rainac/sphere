@@ -9,16 +9,16 @@
 Create installation dir and setup PREFIX variable used in this
 document's examples:
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 export PREFIX=$HOME/sw/sph-new
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 mkdir $PREFIX
 #+END_SRC
 
 Install required system packages:
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 sudo apt-get install make g++ libhdf5-dev libvtk5-dev freeglut3-dev octave
 #+END_SRC
 
@@ -33,12 +33,12 @@ sudo apt-get install paraview hdf5-tools
 *** Obtain H5Part library
 
 Download H5Part library
-#+BEGIN_SRC sh :tangle install.sh :results none
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none
 wget https://codeforge.lbl.gov/frs/download.php/170/H5Part-1.6.1.tar.gz
 #+END_SRC
 
 Unpack H5Part library
-#+BEGIN_SRC sh :tangle install.sh :results none
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none
 tar -xzf H5Part-1.6.1.tar.gz
 #+END_SRC
 
@@ -48,7 +48,7 @@ On a current Debian Testing system the layout of paths of libhdf5-dev
 is different from what H5Part expects. Therefore we create a directory
 with two symlinks that point to the correct locations:
 
-#+BEGIN_SRC sh :tangle install.sh :results none
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none
 pushd /usr/local
 mkdir hdf5
 cd hdf5
@@ -58,7 +58,7 @@ popd
 #+END_SRC
 
 Check result:
-#+BEGIN_SRC sh :tangle install.sh :results none
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none
 ls -l /usr/local/hdf5
 #+END_SRC
 
@@ -66,19 +66,19 @@ ls -l /usr/local/hdf5
 *** Compile and install
 
 Now, change directory to ~h5part-1.6.1~ and run ~configure~ and ~make install~
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 cd H5Part-1.6.1
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 ./configure --prefix=$PREFIX/h5part --with-hdf5path=/usr/local/hdf5
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 make -j8 install
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 cd ..
 #+END_SRC
 
@@ -87,27 +87,27 @@ cd ..
 Download the Name Constant Generator tool from
 https://savannah.nongnu.org/projects/named-constant/:
 
-#+BEGIN_SRC sh :tangle install.sh :results none
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none
 wget http://download.savannah.gnu.org/releases/named-constant/named-constant-0.3.1.tar.gz
 #+END_SRC
 
 Unpack:
-#+BEGIN_SRC sh :tangle install.sh :results none
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none
 tar -xzf named-constant-0.3.1.tar.gz
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 cd named-constant-0.3.1
 make prefix=$PREFIX install
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 cd ..
 #+END_SRC
 
 Now set the GENNC_HOME variable in your shell and also add the /bin
 directory to the $PATH:
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 export GENNC_HOME=$PREFIX/gennc
 export PATH=$PATH:$GENNC_HOME/bin
 #+END_SRC
@@ -116,7 +116,7 @@ export PATH=$PATH:$GENNC_HOME/bin
 
 First, you can set up some environment variables to control the
 compiler flags during the build. Recommended settings are:
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 export CXXFLAGS="-Wall -Wextra -m64 -O3 -march=native"
 export CPPFLAGS="-DNDEBUG"
 export LDFLAGS="-m64"
@@ -124,14 +124,14 @@ export LDFLAGS="-m64"
 
 Run the script ~bootstrap~ to invoke the autotools, which will
 generate the ~configure~ script, and some other files:
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 ./bootstrap
 #+END_SRC
 
 Now, run configure, setting the location of the H5Part library that we
 installed and also using the make shift HDF5 directory that we created:
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 ./configure --prefix=$PREFIX/sph-v1.0.0 --with-h5part=$PREFIX/h5part --with-hdf5=/usr/local/hdf5
 #+END_SRC
 
@@ -142,11 +142,11 @@ separately:
  --with-hdf5-incdir=/usr/include/hdf5/serial --with-hdf5-libdir=/usr/lib/x86_64-linux-gnu/hdf5/serial
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 make -j8 install
 #+END_SRC
 
-#+BEGIN_SRC sh :tangle install.sh :results none :session inst-sph-new
+#+BEGIN_SRC sh :tangle setup-sphere.sh :results none :session inst-sph-new
 export PATH=$PATH:$PREFIX/sph-v1.0.0/bin
 #+END_SRC
 
@@ -163,3 +163,30 @@ make
 #+BEGIN_SRC sh :tangle run-demo.sh :results none :session inst-sph-new
 sphere -d1e-4 -r10 vtk/test-cases2/2D/monaghan-ellipsis/mittel/test.vtk
 #+END_SRC
+This creates a file ~sph-result-2d.h5~ which contains the particle
+data at each of the save time steps. Also, information about the
+simulation is printed to the console in XML format and saved also in
+the file ~sph-result-2d.sphrun.xml~.
+
+For more information on sphere options, run
+#+BEGIN_SRC sh
+sphere -h
+#+END_SRC
+
+~sphere~ is just a shell script that launches the actual SPH
+binary. Some settings are not yet available as options in ~sphere~ but
+can only be triggered using environment variables.
+
+*** Converting output to VTK
+
+There is the script ~h52vtk.sh~, which converts a single HDF5 file
+into a series of VTK files, which can be viewed with Paraview.
+
+#+BEGIN_SRC sh :tangle run-demo.sh
+h52vtk.sh sph-result-2d.h5
+#+END_SRC
+
+This creates a directory ~sph-result-2d~ with files ~res_00000.vtk~,
+~res_00001.vtk~, ... which contain the dynamic particle data and a
+file ~boundary.vtk~ which contains the static (boundary) particle
+data.
