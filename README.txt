@@ -17,7 +17,7 @@ _________________
 ..... 1.2.2 Prepare system
 ..... 1.2.3 Compile and install
 .. 1.3 Set up GenNC
-.. 1.4 Compile SPH
+.. 1.4 Compile Sphere
 ..... 1.4.1 Build test input files (scenes)
 ..... 1.4.2 Running Sphere
 ..... 1.4.3 Converting output to VTK
@@ -148,8 +148,8 @@ _________________
   `----
 
 
-1.4 Compile SPH
-~~~~~~~~~~~~~~~
+1.4 Compile Sphere
+~~~~~~~~~~~~~~~~~~
 
   First, you can set up some environment variables to control the
   compiler flags during the build. Recommended settings are:

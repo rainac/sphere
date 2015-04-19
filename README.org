@@ -112,7 +112,7 @@ export GENNC_HOME=$PREFIX/gennc
 export PATH=$PATH:$GENNC_HOME/bin
 #+END_SRC
 
-** Compile SPH
+** Compile Sphere
 
 First, you can set up some environment variables to control the
 compiler flags during the build. Recommended settings are:
