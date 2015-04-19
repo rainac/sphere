@@ -1,2 +1,2 @@
 
-dist_bin_SCRIPTS = sphere
+dist_bin_SCRIPTS = sphere h52vtk.sh
