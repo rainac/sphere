@@ -203,18 +203,20 @@ _________________
 --------------------
 
   ,----
-  | sphere -d1e-4 -r10 vtk/test-cases2/2D/monaghan-ellipsis/mittel/test.vtk
+  | sphere -2 -d1e-5 -S1000 -irk3 vtk/test-cases2/2D/monaghan-ellipsis/mittel/test.vtk
   `----
-  This creates a file `sph-result-2d.h5' which contains the particle
-  data at each of the save time steps. Also, information about the
-  simulation is printed to the console in XML format and saved also in
-  the file `sph-result-2d.sphrun.xml'.
+  This command runs Sphere in 2D mode, with fixed timestep of 1/100000 s
+  using the RK3 (Simpson rule) integrator with a save rate of 1000 Hz.
+  The last argument is the inititial state in a VTK file. The simulation
+  creates a file `sph-result-2d.h5' which contains the particle data at
+  each of the save time steps. Also, information about the simulation is
+  printed to the console in XML format and saved also in the file
+  `sph-result-2d.sphrun.xml'.
 
   For more information on sphere options, run
   ,----
   | sphere -h
   `----
-
   `sphere' is just a shell script that launches the actual SPH
   binary. Some settings are not yet available as options in `sphere' but
   can only be triggered using environment variables.
