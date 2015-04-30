@@ -6,13 +6,15 @@
 #include "random-array.hh"
 #include "CoreSuite.h"
 
-#define YAFAD_POINT_DEFINED
 #define SPH_DIM 2
 
 #include "../src/kernels.hh"
-#include "yafad/yafad.hh"
 
+#ifdef SPH_AD_YAFAD
+#define YAFAD_POINT_DEFINED
+#include "yafad/yafad.hh"
 typedef yafad::FO::Static::Adouble Adouble;
+#endif
 
 using CPPUNIT_NS::TestFixture;
 
@@ -24,7 +26,9 @@ class TestKernel2D : public TestFixture {
   CPPUNIT_TEST( zeroOutsideReach );
 
   CPPUNIT_TEST( combinedFunction );
+#ifdef SPH_AD_YAFAD
   CPPUNIT_TEST( checkGradientAD );
+#endif
   CPPUNIT_TEST( checkIntegralIsOne );
 
   CPPUNIT_TEST_SUITE_END();
@@ -32,12 +36,14 @@ class TestKernel2D : public TestFixture {
   typedef Point<double, SPH_DIM> Vector;
   typedef KernelInterface<double, Vector, SPH_DIM> Kernel;
 
-  typedef Point<Adouble, SPH_DIM> ADVector;
-  typedef KernelInterface<Adouble, ADVector, SPH_DIM> ADKernel;
-
   std::vector<std::string> kernelNames;
   std::vector<Kernel *> kernels;
+
+#ifdef SPH_AD_YAFAD
+  typedef Point<Adouble, SPH_DIM> ADVector;
+  typedef KernelInterface<Adouble, ADVector, SPH_DIM> ADKernel;
   std::vector<ADKernel *> ADkernels;
+#endif
 
   DRandomArray *randArray;
 
@@ -69,10 +75,14 @@ public:
     kernelNames.push_back("wendland3");
 
     kernels.resize(kernelNames.size());
+#ifdef SPH_AD_YAFAD
     ADkernels.resize(kernelNames.size());
+#endif
     for(size_t i = 0; i < kernelNames.size(); ++i) {
       kernels[i] = Kernel::makeKernel(kernelNames[i], H);
+#ifdef SPH_AD_YAFAD
       ADkernels[i] = ADKernel::makeKernel(kernelNames[i], H);
+#endif
     }
   }
 
@@ -142,6 +152,7 @@ public:
     }
   }
 
+#ifdef SPH_AD_YAFAD
   void checkGradientAD() {
     ADVector dist1;
     Vector dist2, grad1, grad2;
@@ -176,6 +187,7 @@ public:
       }
     }
   }
+#endif
 
   void checkIntegralIsOne() {
     size_t const N = 100000;
